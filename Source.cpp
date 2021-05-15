@@ -105,6 +105,8 @@ struct Node
 					tmp->data = NULL;
 					delete tmp->left;
 					delete tmp->right;
+					tmp->left = nullptr;
+					tmp->right = nullptr;
 				}
 			}
 		}
@@ -168,6 +170,10 @@ int main()
 	cout << find(root2, 'E') << " " << find(root2, 'A') << " " << find(root2, 'M') << " " << find(root2, 'F') << " " << find(root2, 'G') << " " << find(root2, 'Q') << " " << find(root2, 'X') << " " << find(root2, 'W') << " " << find(root2, 'Z') << "\n";
 
 	root2.remove('M');
+
+	cout << find(root2, 'E') << " " << find(root2, 'A') << " " << find(root2, 'M') << " " << find(root2, 'F') << " " << find(root2, 'G') << " " << find(root2, 'Q') << " " << find(root2, 'X') << " " << find(root2, 'W') << " " << find(root2, 'Z') << "\n";
+
+	root2.insert('Z');
 
 	cout << find(root2, 'E') << " " << find(root2, 'A') << " " << find(root2, 'M') << " " << find(root2, 'F') << " " << find(root2, 'G') << " " << find(root2, 'Q') << " " << find(root2, 'X') << " " << find(root2, 'W') << " " << find(root2, 'Z') << "\n";
 }
